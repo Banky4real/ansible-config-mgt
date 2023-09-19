@@ -9,4 +9,4 @@
 172.31.92.231 ansible_ssh_user='ubuntu' 
 
 [lb]
-172.31.92.204 ansible_ssh_user='ubuntu'
+172.31.38.10 ansible_ssh_user='ubuntu'

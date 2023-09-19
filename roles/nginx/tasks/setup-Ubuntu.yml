@@ -18,3 +18,9 @@
     state: absent
   when: nginx_ppa_added is changed
   tags: ['skip_ansible_lint']
+
+- name: Ensure nginx is installed.
+  become: yes
+  package:
+    name: "{{ nginx_package_name }}"
+    state: present
