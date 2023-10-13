@@ -10,8 +10,8 @@
 - hosts: all
 - import_playbook: ../static-assignments/common-del.yml
 
-# - hosts: uat-webservers
-# - import_playbook: ../static-assignments/uat-webservers.yml
+- hosts: nginx
+- import_playbook: ../static-assignments/uat-webservers.yml
 
 # - name: import common file
 #   import_playbook: ../static-assignments/common.yml
@@ -26,9 +26,9 @@
 # - name: import database file
 #   import_playbook: ../static-assignments/db.yml
 
-- name: import webserver files
-  import_playbook: ../static-assignments/uat-webservers.yml
+# - name: import webserver files
+#   import_playbook: ../static-assignments/uat-webservers.yml
 
-- name: import Loadbalancers assignments
-  import_playbook: ../static-assignments/lb.yml
-  when: load_balancer_is_required
+# - name: import Loadbalancers assignments
+#   import_playbook: ../static-assignments/lb.yml
+#   when: load_balancer_is_required
