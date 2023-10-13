@@ -31,6 +31,7 @@ pipeline{
         steps {
            ansiblePlaybook become: true, colorized: true, credentialsId: 'pbl-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/dev', playbook: 'playbooks/site.yml'
       }
+      }
 
       stage('Clean Workspace after build'){
         steps{
@@ -39,5 +40,4 @@ pipeline{
       }
 }
 
-}
 }
