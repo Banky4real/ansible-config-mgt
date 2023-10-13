@@ -1,17 +1,17 @@
 ---
-- hosts: all
-- name: Include dynamic variables 
+- hosts: db
+- name: database assignment
   # tasks:
-  import_playbook: ../static-assignments/common.yml
-  include: ../dynamic-assignments/env-vars.yml
-  tags:
-    - always
-
-- hosts: all
-- import_playbook: ../static-assignments/common-del.yml
+  import_playbook: ../static-assignments/db.yml
+  # include: ../dynamic-assignments/env-vars.yml
+  # tags:
+  #   - always
 
 - hosts: nginx
-- import_playbook: ../static-assignments/uat-webservers.yml
+- import_playbook: ../static-assignments/nginx.yml
+
+# - hosts: nginx
+# - import_playbook: ../static-assignments/uat-webservers.yml
 
 # - name: import common file
 #   import_playbook: ../static-assignments/common.yml
